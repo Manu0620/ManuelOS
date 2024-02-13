@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "fJgYML0ftzrHFdEuVocU6LmG+sdyoOjSFLZwKX+3dN6FGna8JHx3cyonAvjGBz83LaQFbYpW5RJpuIeXJSemOg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Manuel\\source\\repos\\ManuelOS\\ManuelOS\\ManuelOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Manuel\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
+    "C:\\Users\\Manuel\\.nuget\\packages\\fontawesome.sharp\\6.3.0\\fontawesome.sharp.6.3.0.nupkg.sha512",
+    "C:\\Users\\Manuel\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
+    "C:\\Users\\Manuel\\.nuget\\packages\\microsoft.web.webview2\\1.0.2277.86\\microsoft.web.webview2.1.0.2277.86.nupkg.sha512",
+    "C:\\Users\\Manuel\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\Manuel\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

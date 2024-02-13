@@ -1,0 +1,70 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Bunifu.UI.WinForms/6.3.0": {
+        "runtime": {
+          "lib/net452/Bunifu.Licensing.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          },
+          "lib/net452/Bunifu.UI.WinForms.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "FontAwesome/4.7.0": {},
+      "FontAwesome.Sharp/6.3.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {
+            "assemblyVersion": "6.3.0.0",
+            "fileVersion": "6.3.0.0"
+          }
+        }
+      },
+      "MaterialSkin.Updated/0.2.2": {
+        "runtime": {
+          "lib/MaterialSkin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bunifu.UI.WinForms/6.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9VY6jFrGC6Ei3E27tvvE7FalfojrT+PWNjFPIy0k83W0Mb+YM56U8AGHvwtjJFbyIAtHhtxj3gIEJu6XA2wJcA==",
+      "path": "bunifu.ui.winforms/6.3.0",
+      "hashPath": "bunifu.ui.winforms.6.3.0.nupkg.sha512"
+    },
+    "FontAwesome/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n4H/brfszElyoZ4kmGh8E75uqvLzLvFr3h2PFVdPH1LwUmWIpeqdaW2pcC4oZAhg7sESyObh0IZpAI8COCNeUg==",
+      "path": "fontawesome/4.7.0",
+      "hashPath": "fontawesome.4.7.0.nupkg.sha512"
+    },
+    "FontAwesome.Sharp/6.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3/Fb0N04yYK8An07oox5ISlUyNgsnWildHfoP69uqTEOsemQemRyciphMkXZOcdBupjUD+lVsRE3FqG41/dzPA==",
+      "path": "fontawesome.sharp/6.3.0",
+      "hashPath": "fontawesome.sharp.6.3.0.nupkg.sha512"
+    },
+    "MaterialSkin.Updated/0.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X4FGDVbHUb0h/gBTje6nPk3tYokwPqDA4+2PsMm28z736j/B2CNsLNeDOIzqqvdmCm6hfD5amFRQPf4HU9BmGQ==",
+      "path": "materialskin.updated/0.2.2",
+      "hashPath": "materialskin.updated.0.2.2.nupkg.sha512"
+    }
+  }
+}
