@@ -43,6 +43,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             iconDropDownButton1 = new FontAwesome.Sharp.IconDropDownButton();
             desktopPanel = new Panel();
+            explorerBtn = new FontAwesome.Sharp.IconButton();
+            recycleBinBtn = new FontAwesome.Sharp.IconButton();
             dockPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             musicIndicator = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -94,6 +96,8 @@
             // desktopPanel
             // 
             desktopPanel.BackColor = Color.FromArgb(12, 12, 12);
+            desktopPanel.Controls.Add(explorerBtn);
+            desktopPanel.Controls.Add(recycleBinBtn);
             desktopPanel.Controls.Add(dockPanel);
             desktopPanel.Controls.Add(infoPanel);
             desktopPanel.Dock = DockStyle.Fill;
@@ -101,6 +105,41 @@
             desktopPanel.Name = "desktopPanel";
             desktopPanel.Size = new Size(1600, 900);
             desktopPanel.TabIndex = 0;
+            // 
+            // explorerBtn
+            // 
+            explorerBtn.Cursor = Cursors.Hand;
+            explorerBtn.FlatAppearance.BorderSize = 0;
+            explorerBtn.FlatStyle = FlatStyle.Flat;
+            explorerBtn.ForeColor = Color.PaleGreen;
+            explorerBtn.IconChar = FontAwesome.Sharp.IconChar.FolderClosed;
+            explorerBtn.IconColor = Color.PaleGreen;
+            explorerBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            explorerBtn.Location = new Point(11, 118);
+            explorerBtn.Name = "explorerBtn";
+            explorerBtn.Size = new Size(87, 74);
+            explorerBtn.TabIndex = 7;
+            explorerBtn.Text = "File Explorer";
+            explorerBtn.TextImageRelation = TextImageRelation.ImageAboveText;
+            explorerBtn.UseVisualStyleBackColor = true;
+            explorerBtn.Click += explorerBtn_Click;
+            // 
+            // recycleBinBtn
+            // 
+            recycleBinBtn.Cursor = Cursors.Hand;
+            recycleBinBtn.FlatAppearance.BorderSize = 0;
+            recycleBinBtn.FlatStyle = FlatStyle.Flat;
+            recycleBinBtn.ForeColor = Color.PaleGreen;
+            recycleBinBtn.IconChar = FontAwesome.Sharp.IconChar.Recycle;
+            recycleBinBtn.IconColor = Color.PaleGreen;
+            recycleBinBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            recycleBinBtn.Location = new Point(11, 38);
+            recycleBinBtn.Name = "recycleBinBtn";
+            recycleBinBtn.Size = new Size(87, 74);
+            recycleBinBtn.TabIndex = 6;
+            recycleBinBtn.Text = "Recycle Bin";
+            recycleBinBtn.TextImageRelation = TextImageRelation.ImageAboveText;
+            recycleBinBtn.UseVisualStyleBackColor = true;
             // 
             // dockPanel
             // 
@@ -160,7 +199,7 @@
             taskIndicator.Controls.Add(guna2Panel1);
             taskIndicator.CustomizableEdges = customizableEdges7;
             taskIndicator.FillColor = Color.PaleGreen;
-            taskIndicator.Location = new Point(489, 56);
+            taskIndicator.Location = new Point(488, 56);
             taskIndicator.Name = "taskIndicator";
             taskIndicator.ShadowDecoration.CustomizableEdges = customizableEdges8;
             taskIndicator.Size = new Size(20, 7);
@@ -187,7 +226,7 @@
             textIndicator.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             textIndicator.CustomizableEdges = customizableEdges9;
             textIndicator.FillColor = Color.PaleGreen;
-            textIndicator.Location = new Point(436, 56);
+            textIndicator.Location = new Point(435, 56);
             textIndicator.Name = "textIndicator";
             textIndicator.ShadowDecoration.CustomizableEdges = customizableEdges10;
             textIndicator.Size = new Size(20, 7);
@@ -203,7 +242,7 @@
             browserIndicator.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             browserIndicator.CustomizableEdges = customizableEdges11;
             browserIndicator.FillColor = Color.PaleGreen;
-            browserIndicator.Location = new Point(383, 56);
+            browserIndicator.Location = new Point(382, 56);
             browserIndicator.Name = "browserIndicator";
             browserIndicator.ShadowDecoration.CustomizableEdges = customizableEdges12;
             browserIndicator.Size = new Size(20, 7);
@@ -215,6 +254,7 @@
             // 
             taskManagerIcon.Anchor = AnchorStyles.Top;
             taskManagerIcon.BackColor = Color.FromArgb(18, 18, 18);
+            taskManagerIcon.Cursor = Cursors.Hand;
             taskManagerIcon.ForeColor = Color.PaleGreen;
             taskManagerIcon.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
             taskManagerIcon.IconColor = Color.PaleGreen;
@@ -222,22 +262,28 @@
             taskManagerIcon.IconSize = 42;
             taskManagerIcon.Location = new Point(477, 14);
             taskManagerIcon.Name = "taskManagerIcon";
+            taskManagerIcon.Padding = new Padding(5);
             taskManagerIcon.Size = new Size(42, 42);
+            taskManagerIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             taskManagerIcon.TabIndex = 9;
             taskManagerIcon.TabStop = false;
+            taskManagerIcon.Click += taskManagerIcon_Click;
             // 
             // musicIcon
             // 
             musicIcon.Anchor = AnchorStyles.Top;
             musicIcon.BackColor = Color.FromArgb(18, 18, 18);
+            musicIcon.Cursor = Cursors.Hand;
             musicIcon.ForeColor = Color.PaleGreen;
-            musicIcon.IconChar = FontAwesome.Sharp.IconChar.ItunesNote;
+            musicIcon.IconChar = FontAwesome.Sharp.IconChar.Spotify;
             musicIcon.IconColor = Color.PaleGreen;
             musicIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             musicIcon.IconSize = 42;
-            musicIcon.Location = new Point(530, 14);
+            musicIcon.Location = new Point(531, 14);
             musicIcon.Name = "musicIcon";
+            musicIcon.Padding = new Padding(5);
             musicIcon.Size = new Size(42, 42);
+            musicIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             musicIcon.TabIndex = 8;
             musicIcon.TabStop = false;
             musicIcon.Click += musicIcon_Click;
@@ -246,14 +292,17 @@
             // 
             textEditorIcon.Anchor = AnchorStyles.Top;
             textEditorIcon.BackColor = Color.FromArgb(18, 18, 18);
+            textEditorIcon.Cursor = Cursors.Hand;
             textEditorIcon.ForeColor = Color.PaleGreen;
-            textEditorIcon.IconChar = FontAwesome.Sharp.IconChar.FileText;
+            textEditorIcon.IconChar = FontAwesome.Sharp.IconChar.NoteSticky;
             textEditorIcon.IconColor = Color.PaleGreen;
             textEditorIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             textEditorIcon.IconSize = 42;
             textEditorIcon.Location = new Point(424, 14);
             textEditorIcon.Name = "textEditorIcon";
+            textEditorIcon.Padding = new Padding(5);
             textEditorIcon.Size = new Size(42, 42);
+            textEditorIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             textEditorIcon.TabIndex = 7;
             textEditorIcon.TabStop = false;
             textEditorIcon.Click += textEditorIcon_Click;
@@ -262,6 +311,7 @@
             // 
             browserIcon.Anchor = AnchorStyles.Top;
             browserIcon.BackColor = Color.FromArgb(18, 18, 18);
+            browserIcon.Cursor = Cursors.Hand;
             browserIcon.ForeColor = Color.PaleGreen;
             browserIcon.IconChar = FontAwesome.Sharp.IconChar.Edge;
             browserIcon.IconColor = Color.PaleGreen;
@@ -269,7 +319,9 @@
             browserIcon.IconSize = 42;
             browserIcon.Location = new Point(371, 14);
             browserIcon.Name = "browserIcon";
+            browserIcon.Padding = new Padding(5);
             browserIcon.Size = new Size(42, 42);
+            browserIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             browserIcon.TabIndex = 6;
             browserIcon.TabStop = false;
             browserIcon.Click += browserIcon_Click;
@@ -285,7 +337,9 @@
             menuIcon.IconSize = 42;
             menuIcon.Location = new Point(318, 14);
             menuIcon.Name = "menuIcon";
+            menuIcon.Padding = new Padding(5);
             menuIcon.Size = new Size(42, 42);
+            menuIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             menuIcon.TabIndex = 5;
             menuIcon.TabStop = false;
             // 
@@ -313,7 +367,7 @@
             // 
             minimize.Anchor = AnchorStyles.Right;
             minimize.BackColor = Color.FromArgb(18, 18, 18);
-            minimize.Cursor = Cursors.PanNW;
+            minimize.Cursor = Cursors.Hand;
             minimize.ForeColor = Color.PaleGreen;
             minimize.IconChar = FontAwesome.Sharp.IconChar.DownLeftAndUpRightToCenter;
             minimize.IconColor = Color.PaleGreen;
@@ -331,7 +385,7 @@
             // 
             maximize.Anchor = AnchorStyles.Right;
             maximize.BackColor = Color.FromArgb(18, 18, 18);
-            maximize.Cursor = Cursors.PanNW;
+            maximize.Cursor = Cursors.Hand;
             maximize.ForeColor = Color.PaleGreen;
             maximize.IconChar = FontAwesome.Sharp.IconChar.Square;
             maximize.IconColor = Color.PaleGreen;
@@ -349,9 +403,9 @@
             // 
             restart.Anchor = AnchorStyles.Right;
             restart.BackColor = Color.FromArgb(18, 18, 18);
-            restart.Cursor = Cursors.PanNW;
+            restart.Cursor = Cursors.Hand;
             restart.ForeColor = Color.PaleGreen;
-            restart.IconChar = FontAwesome.Sharp.IconChar.RotateBack;
+            restart.IconChar = FontAwesome.Sharp.IconChar.Refresh;
             restart.IconColor = Color.PaleGreen;
             restart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             restart.IconSize = 20;
@@ -361,13 +415,13 @@
             restart.SizeMode = PictureBoxSizeMode.CenterImage;
             restart.TabIndex = 7;
             restart.TabStop = false;
-            restart.Click += restart_Click;
+            restart.Click += Restart_Click;
             // 
             // powerOff
             // 
             powerOff.Anchor = AnchorStyles.Right;
             powerOff.BackColor = Color.FromArgb(18, 18, 18);
-            powerOff.Cursor = Cursors.PanNW;
+            powerOff.Cursor = Cursors.Hand;
             powerOff.ForeColor = Color.PaleGreen;
             powerOff.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             powerOff.IconColor = Color.PaleGreen;
@@ -379,7 +433,7 @@
             powerOff.SizeMode = PictureBoxSizeMode.CenterImage;
             powerOff.TabIndex = 6;
             powerOff.TabStop = false;
-            powerOff.Click += powerOff_Click;
+            powerOff.Click += PowerOff_Click;
             // 
             // iconPictureBox2
             // 
@@ -493,5 +547,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel taskIndicator;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private FontAwesome.Sharp.IconButton recycleBinBtn;
+        private FontAwesome.Sharp.IconButton explorerBtn;
     }
 }

@@ -77,9 +77,9 @@
             artistLabel.Anchor = AnchorStyles.Top;
             artistLabel.AutoSize = false;
             artistLabel.BackColor = Color.Transparent;
-            artistLabel.Font = new Font("Roboto Medium", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            artistLabel.Font = new Font("Roboto Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             artistLabel.ForeColor = Color.PaleGreen;
-            artistLabel.Location = new Point(232, 286);
+            artistLabel.Location = new Point(235, 288);
             artistLabel.Name = "artistLabel";
             artistLabel.Size = new Size(307, 25);
             artistLabel.TabIndex = 18;
@@ -92,11 +92,11 @@
             titleLabel.Anchor = AnchorStyles.Top;
             titleLabel.AutoSize = false;
             titleLabel.BackColor = Color.Transparent;
-            titleLabel.Font = new Font("Roboto", 11.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            titleLabel.Font = new Font("Roboto", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             titleLabel.ForeColor = Color.PaleGreen;
-            titleLabel.Location = new Point(232, 255);
+            titleLabel.Location = new Point(88, 263);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(307, 25);
+            titleLabel.Size = new Size(599, 25);
             titleLabel.TabIndex = 17;
             titleLabel.Text = "Titulo";
             titleLabel.TextAlignment = ContentAlignment.MiddleCenter;
@@ -108,11 +108,11 @@
             iconPictureBox2.BackColor = Color.FromArgb(18, 18, 18);
             iconPictureBox2.Enabled = false;
             iconPictureBox2.ForeColor = Color.PaleGreen;
-            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PlayCircle;
+            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Spotify;
             iconPictureBox2.IconColor = Color.PaleGreen;
             iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox2.IconSize = 159;
-            iconPictureBox2.Location = new Point(306, 103);
+            iconPictureBox2.Location = new Point(310, 103);
             iconPictureBox2.Name = "iconPictureBox2";
             iconPictureBox2.Size = new Size(159, 159);
             iconPictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -125,11 +125,11 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Roboto", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.PaleGreen;
-            guna2HtmlLabel1.Location = new Point(296, 43);
+            guna2HtmlLabel1.Location = new Point(328, 48);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(182, 46);
+            guna2HtmlLabel1.Size = new Size(118, 46);
             guna2HtmlLabel1.TabIndex = 14;
-            guna2HtmlLabel1.Text = "Play Music";
+            guna2HtmlLabel1.Text = "Spotify";
             guna2HtmlLabel1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
             // songDuration
@@ -262,6 +262,7 @@
             Controls.Add(contentPanel);
             Name = "MusicPlayer";
             Size = new Size(800, 400);
+            Load += MusicPlayer_Load;
             contentPanel.ResumeLayout(false);
             contentPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();

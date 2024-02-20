@@ -33,4 +33,5 @@ C:\Users\Manuel\source\repos\ManuelOS\ManuelOS\bin\Debug\net8.0-windows7.0\Micro
 C:\Users\Manuel\source\repos\ManuelOS\ManuelOS\bin\Debug\net8.0-windows7.0\Microsoft.Web.WebView2.Wpf.dll
 C:\Users\Manuel\source\repos\ManuelOS\ManuelOS\obj\Debug\net8.0-windows7.0\ManuelOS.SongsList.resources
 C:\Users\Manuel\source\repos\ManuelOS\ManuelOS\obj\Debug\net8.0-windows7.0\ManuelOS.sourcelink.json
-C:\Users\Manuel\source\repos\ManuelOS\ManuelOS\obj\Debug\net8.0-windows7.0\ManuelOS.FileExporer.resources
+C:\Users\Manuel\source\repos\ManuelOS\ManuelOS\obj\Debug\net8.0-windows7.0\ManuelOS.FileExplorer.resources
+C:\Users\Manuel\source\repos\ManuelOS\ManuelOS\obj\Debug\net8.0-windows7.0\ManuelOS.TaskManager.resources

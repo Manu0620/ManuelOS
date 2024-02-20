@@ -36,8 +36,10 @@
             mnOpen = new ToolStripMenuItem();
             menuSave = new ToolStripMenuItem();
             menuSaveAs = new ToolStripMenuItem();
+            mnCerrar = new ToolStripMenuItem();
             menuExit = new ToolStripMenuItem();
             panel1 = new Panel();
+            messageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
             contentPanel.SuspendLayout();
             Menu.SuspendLayout();
             SuspendLayout();
@@ -82,7 +84,7 @@
             // sdsdToolStripMenuItem
             // 
             sdsdToolStripMenuItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            sdsdToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnNew, mnOpen, menuSave, menuSaveAs, menuExit });
+            sdsdToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnNew, mnOpen, menuSave, menuSaveAs, mnCerrar, menuExit });
             sdsdToolStripMenuItem.Font = new Font("Roboto", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             sdsdToolStripMenuItem.ForeColor = Color.PaleGreen;
             sdsdToolStripMenuItem.Name = "sdsdToolStripMenuItem";
@@ -115,6 +117,7 @@
             menuSave.Name = "menuSave";
             menuSave.Size = new Size(180, 22);
             menuSave.Text = "Save";
+            menuSave.Click += mnSave_Click;
             // 
             // menuSaveAs
             // 
@@ -123,6 +126,16 @@
             menuSaveAs.Name = "menuSaveAs";
             menuSaveAs.Size = new Size(180, 22);
             menuSaveAs.Text = "Save As";
+            menuSaveAs.Click += menuSaveAs_Click;
+            // 
+            // mnCerrar
+            // 
+            mnCerrar.BackColor = Color.FromArgb(36, 36, 36);
+            mnCerrar.ForeColor = Color.PaleGreen;
+            mnCerrar.Name = "mnCerrar";
+            mnCerrar.Size = new Size(180, 22);
+            mnCerrar.Text = "Close";
+            mnCerrar.Click += mnCerrar_Click;
             // 
             // menuExit
             // 
@@ -140,6 +153,15 @@
             panel1.Size = new Size(1280, 28);
             panel1.TabIndex = 2;
             // 
+            // messageDialog
+            // 
+            messageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            messageDialog.Caption = "Warning";
+            messageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            messageDialog.Parent = null;
+            messageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            messageDialog.Text = "There is changes, you want to save?";
+            // 
             // TextEditor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -147,6 +169,7 @@
             Controls.Add(contentPanel);
             Name = "TextEditor";
             Size = new Size(1280, 692);
+            Load += TextEditor_Load;
             contentPanel.ResumeLayout(false);
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
@@ -165,5 +188,7 @@
         private ToolStripMenuItem menuSave;
         private ToolStripMenuItem menuSaveAs;
         private Panel panel1;
+        private ToolStripMenuItem mnCerrar;
+        private Guna.UI2.WinForms.Guna2MessageDialog messageDialog;
     }
 }

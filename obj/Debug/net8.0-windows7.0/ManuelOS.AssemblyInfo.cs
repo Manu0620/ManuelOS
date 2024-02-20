@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ManuelOS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b9448c03dcd1fbecba58f2a5f9f330b2d487ffd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3296f912f658981e1b9ee8a1b49bb1d0cdd4ae3")]
 [assembly: System.Reflection.AssemblyProductAttribute("ManuelOS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ManuelOS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -32,8 +32,9 @@
 
   <ItemGroup>
     <Folder Include="Components\" />
-    <Folder Include="Storage\Documents\" />
+    <Folder Include="Storage\Documents\Hola\" />
     <Folder Include="Storage\Music\" />
+    <Folder Include="Storage\Recycle Bin\" />
   </ItemGroup>
 
 </Project>

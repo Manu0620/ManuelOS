@@ -26,6 +26,13 @@ namespace ManuelOS
         public void SetTitle(string title)
         {
             titleLabel.Text = title;
+            if(title.Contains("Explorer")  || title.Contains("Explorador") || title.Contains("File") || title.Contains("Archivo"))
+            {
+                titleLabel.ForeColor = System.Drawing.Color.Bisque;
+                exit.ForeColor = System.Drawing.Color.Bisque;
+                minimize.ForeColor = System.Drawing.Color.Bisque;
+                maximize.ForeColor = System.Drawing.Color.Bisque;
+            }
         }
 
         private void exit_Click(object sender, EventArgs e)

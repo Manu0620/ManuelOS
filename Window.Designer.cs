@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             contentPanel = new Panel();
             infoPanel = new Panel();
@@ -75,7 +75,7 @@
             // 
             maximize.Anchor = AnchorStyles.Right;
             maximize.BackColor = Color.FromArgb(18, 18, 18);
-            maximize.Cursor = Cursors.PanNW;
+            maximize.Cursor = Cursors.Hand;
             transition.SetDecoration(maximize, Guna.UI2.AnimatorNS.DecorationType.None);
             maximize.ForeColor = Color.PaleGreen;
             maximize.IconChar = FontAwesome.Sharp.IconChar.Square;
@@ -94,6 +94,7 @@
             // 
             minimize.Anchor = AnchorStyles.Right;
             minimize.AutoSize = true;
+            minimize.Cursor = Cursors.Hand;
             transition.SetDecoration(minimize, Guna.UI2.AnimatorNS.DecorationType.None);
             minimize.Font = new Font("Roboto", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             minimize.ForeColor = Color.PaleGreen;
@@ -109,6 +110,7 @@
             // 
             exit.Anchor = AnchorStyles.Right;
             exit.AutoSize = true;
+            exit.Cursor = Cursors.Hand;
             transition.SetDecoration(exit, Guna.UI2.AnimatorNS.DecorationType.None);
             exit.Font = new Font("Roboto", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             exit.ForeColor = Color.PaleGreen;
@@ -136,22 +138,22 @@
             // 
             transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Particles;
             transition.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = (PointF)resources.GetObject("animation4.BlindCoeff");
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = (PointF)resources.GetObject("animation4.MosaicCoeff");
-            animation4.MosaicShift = (PointF)resources.GetObject("animation4.MosaicShift");
-            animation4.MosaicSize = 1;
-            animation4.Padding = new Padding(100, 50, 100, 150);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = (PointF)resources.GetObject("animation4.ScaleCoeff");
-            animation4.SlideCoeff = (PointF)resources.GetObject("animation4.SlideCoeff");
-            animation4.TimeCoeff = 2F;
-            animation4.TransparencyCoeff = 0F;
-            transition.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
+            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
+            animation1.MosaicSize = 1;
+            animation1.Padding = new Padding(100, 50, 100, 150);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
+            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
+            animation1.TimeCoeff = 2F;
+            animation1.TransparencyCoeff = 0F;
+            transition.DefaultAnimation = animation1;
             transition.Interval = 100;
             // 
             // Window

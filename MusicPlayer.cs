@@ -11,6 +11,7 @@ namespace ManuelOS
         bool isPause = false;
         int songIndex = 0;
         List<Window> openWindows = new List<Window>();
+        public event EventHandler onSongSended;
 
         public MusicPlayer()
         {
@@ -22,6 +23,8 @@ namespace ManuelOS
             songsList.Add(new Song("ONANA Ni2Ni3", "Jey One", @"C:\Users\Manuel\Music\ManuelOSongs\ONANA-JEY ONE.mp3"));
             songsList.Add(new Song("De Mi Enamorate", "Tito Nieves", @"C:\Users\Manuel\Music\ManuelOSongs\DE MI ENAMORATE.mp3"));
             songsList.Add(new Song("Feliz Navidad Peppa Pig", "Arcangel", @"C:\Users\Manuel\Music\ManuelOSongs\Feliz Navidad Peppa Pig.mp3"));
+            loadMusic();
+
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -43,6 +46,28 @@ namespace ManuelOS
                 {
                     songIndex++;
                     PlaySong(songIndex);
+                }
+            }
+        }
+
+        public void ReceiveSong(string path, string fileName)
+        {
+            if (path != null)
+            {
+                foreach (Song song in songsList)
+                {
+                    if (song.Path == path || song.Path.Contains(fileName))
+                    {
+                        songIndex = songsList.IndexOf(song);
+                        PlaySong(songIndex);
+                        break;
+                    }else
+                    {
+                        songsList.Add(new Song(fileName, "Unknown", path));
+                        songIndex = songsList.Count - 1;
+                        PlaySong(songIndex);
+                        break;
+                    }
                 }
             }
         }
@@ -130,7 +155,6 @@ namespace ManuelOS
             if (songIndex > 0)
             {
                 songIndex--;
-                mediaPlayer.Stop();
                 PlaySong(songIndex);
                 songDuration.Value = 0;
             }
@@ -141,7 +165,6 @@ namespace ManuelOS
             if (songIndex < songsList.Count - 1)
             {
                 songIndex++;
-                mediaPlayer.Stop();
                 PlaySong(songIndex);
                 songDuration.Value = 0;
             }
@@ -180,6 +203,49 @@ namespace ManuelOS
             double totalSeconds = mediaPlayer.NaturalDuration.TimeSpan.TotalSeconds;
             double timeClicked = totalSeconds * percentageClicked;
             mediaPlayer.Position = TimeSpan.FromSeconds(timeClicked);
+        }
+
+        private void loadMusic()
+        {
+            string appPath = getAppDirectory();
+            string fullPath = System.IO.Path.Combine(appPath, "Storage", "Music");
+
+            if (System.IO.Directory.Exists(fullPath))
+            {
+                // Tomar todos los archivos mp3 de la carpeta y agregarlos a la lista de canciones
+                DirectoryInfo dir = new DirectoryInfo(fullPath);
+                FileInfo[] files = dir.GetFiles("*.mp3");
+                foreach (FileInfo file in files)
+                {
+                    // Si el path del archivo no está en la lista de canciones, agregarlo
+                    if (!songsList.Any(s => s.Path.Contains(file.Name)))
+                        songsList.Add(new Song(file.Name, "Unknown", file.FullName));
+                }
+            }
+        }
+
+        private string getAppDirectory()
+        {
+            // Obtener la ruta de ejecución de la aplicación
+            string assemblyPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+
+            // Obtener la ruta del directorio del proyecto
+            string projectDirectory = System.IO.Path.GetDirectoryName(assemblyPath);
+            while (!System.IO.Directory.Exists(System.IO.Path.Combine(projectDirectory, "Storage")))
+            {
+                projectDirectory = System.IO.Directory.GetParent(projectDirectory).FullName;
+                if (projectDirectory == null)
+                {
+                    throw new InvalidOperationException("No se pudo encontrar el directorio del proyecto.");
+                }
+            }
+
+            return projectDirectory;
+        }
+
+        private void MusicPlayer_Load(object sender, EventArgs e)
+        {
+            onSongSended?.Invoke(this, new EventArgs());
         }
     }
 }
